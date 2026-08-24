@@ -4,7 +4,9 @@
 统计时段：8月21日 06:00—8月24日 06:00（北京时间）  
 今日要闻：
 
+- Google DeepMind 将 EVE 的持续世界引入智能体研究，目标覆盖持续学习、长期记忆、长程规划和大规模多智能体互动。
 - Ray 2.58.0 正式完成面向 LLM Serve 的 KV cache 与 token 感知路由，并加入实验性 gVisor 沙箱及 TPU 切片调度能力。
+- OpenAI 高管在原始专访中警告持续性 AI 网络攻击风险，并主张模型发布前执行强制安全标准。
 - Triton 连续补强跨调用与别名共享内存的 barrier 分析；官方 PR 给出的四 CTA 复现从旧主干 1000/1000 失败降至 0/1000。
 - XiangShan 修正 COVE MPT 地址越界与 miss queue 握手路径，避免非法 Smmpt43 请求进入页表遍历。
 
@@ -50,7 +52,23 @@ XiangShan 的 MPTCache 现在会识别超出 43 位范围的 Smmpt43 物理地�
 
 两项修复收紧了 COVE 内存保护表的异常路径，对机密计算场景下的地址检查和请求可靠性有直接意义。改动仍在主干，作者说明握手问题尚未观察到实际请求丢失，公开材料也没有给出整机回归或量产影响。
 
-## 五、业界重磅新闻
+## 五、AI 业界重磅
+
+### 重磅｜[Google DeepMind 把 EVE 持续世界用于长期智能体研究](https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/)
+
+*8月21日 21:00 · 官方研究博客 · 已发布*
+
+Google DeepMind 与 Fenris Creations 将 EVE Online、EVE Vanguard 和 EVE Frontier 作为研究环境，探索持续学习、长期记忆、跨周月乃至更长周期的规划，以及合作、竞争、谈判和经济互动并存的多智能体动态。计划先在与真实玩家隔离的离线 EVE Online 环境中研究，再进入开放可编程的 EVE Frontier；双方已有的 Aura Guidance 则使用 Gemini 为新玩家检索社区知识。
+
+持续世界为智能体提供了比固定基准更接近长期运行系统的状态变化和社会互动条件，对记忆、规划与多智能体架构研究有直接价值。当前发布的是研究合作与路线，不是新模型或基准结果；进入真人在线环境仍取决于能力成熟度。
+
+### 重磅｜[OpenAI 高管警告持续性 AI 网络攻击风险](https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane)
+
+*8月23日 16:00 · 权威媒体原始专访 · 已发布*
+
+OpenAI 首席全球事务官 Chris Lehane 在 The Guardian 原始专访中表示，随着前沿模型增强攻击规划能力，公众和机构需要准备应对由 AI 发起的持续性网络攻击。他主张建立全国性强制安全标准，要求前沿模型在发布或部署前证明达到规定安全水平；报道同时记录 OpenAI 已暂停部分前沿模型训练以增加防护。
+
+这次表态把模型网络攻防能力与强制发布门槛直接联系起来，对模型实验隔离、上线审查和企业防御准备具有现实影响。相关标准尚未成为法律，威胁判断面向未来，报道中的部分事故背景来自此前已公开事件。
 
 ### 重磅｜[Ray 2.58.0 推出 KV 感知 LLM 路由、沙箱与 TPU 调度](https://github.com/ray-project/ray/releases/tag/ray-2.58.0)
 
