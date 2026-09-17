@@ -1,6 +1,6 @@
 # Codex 技术情报每日动态（2026-09-18）
 
-**调研窗口**：2026-09-17 04:37:07—2026-09-18 06:00:25（Asia/Shanghai，左开右闭）。
+**调研窗口**：2026-09-17 04:37:07—2026-09-18 06:40:24（Asia/Shanghai，左开右闭）。
 **覆盖方向**：PyTorch、LLVM/MLIR、Triton & TileLang、RISC-V 与 AI 业界模型/基础设施/芯片/应用。
 **信息口径**：正文只采用已回到官方博客、公告、论坛/RFC、Release、官方 API 或有编辑责任媒体的 verified evidence；聚合器、Google News、Hacker News 与 Daily Papers 仅作候选发现。
 
